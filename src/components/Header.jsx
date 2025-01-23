@@ -23,7 +23,7 @@ export default function Header(){
                 <form className="bg-slate-100 py-2 px-8 rounded-full flex flex-row gap-2 items-center flex-grow">
             
                         <LuSearch />
-                        <input placeholder="Search for products..." className="bg-transparent" ></input>
+                        <input placeholder="Search for products..." className="bg-transparent flex-grow focus:ring-0 focus:outline-none" ></input>
             
                 </form>
             <div className="flex flex-row gap-4">

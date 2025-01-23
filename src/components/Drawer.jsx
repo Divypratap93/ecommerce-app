@@ -21,14 +21,14 @@ export default function Drawer({cart}){
       
 
       {/* Drawer */}
-          <div className={`fixed top-0 right-0 h-full w-96 bg-white shadow-lg z-50 transform flex flex-col justify-between pb-12 `}>
-    <div className="flex flex-col">
+          <div className={`fixed top-0 right-0 h-full w-96 bg-white shadow-lg z-50 transform flex flex-col justify-between pb-12  `}>
+    <div className="flex flex-col max-h-screen flex-auto">
             {/* Drawer Header */}
             <div className="p-4 bg-black text-white text-lg font-bold">
               {cart.length} Items
             </div>
             {/* Drawer Content */}
-            <div className="p-4 flex flex-col gap-4">
+            <div className="p-4 flex flex-col gap-4 overflow-auto py-8">
               {cart.map((item)=>(
           
                 <div key={item.id} className="flex flex-row gap-8 bg-slate-200 rounded-lg p-8 shadow-xl justify-between">
@@ -43,7 +43,7 @@ export default function Drawer({cart}){
           
             </div>
       </div>
-            <p className="font-extrabold font-sans text-emerald-800 text-xl px-6">Total: ${Cart.reduce((total, item) => total + item.price, 0)}</p>
+            <p className="font-extrabold font-sans text-emerald-800 text-xl px-6 ">Total: ${Cart.reduce((total, item) => total + item.price, 0)}</p>
       </div>
     </div>
   );
